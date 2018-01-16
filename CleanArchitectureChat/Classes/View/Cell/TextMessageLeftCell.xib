@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TextMessageLeftCell" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="TextMessageLeftCell" customModule="CleanArchitectureChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="125.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="xFD-FK-6pu">
+                        <rect key="frame" x="56" y="10" width="72" height="105.5"/>
+                        <viewLayoutGuide key="safeArea" id="RQK-YY-ahK"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vd0-kg-lOn" customClass="AsyncImageView" customModule="CleanArchitectureChat" customModuleProvider="target">
+                        <rect key="frame" x="16" y="85" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="J7j-Ss-w90"/>
+                            <constraint firstAttribute="width" constant="30" id="fVx-kv-0c6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FOX-5c-4Ur"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFK-lS-6Qj">
+                        <rect key="frame" x="76" y="20" width="42" height="85.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vd0-kg-lOn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="83o-fB-TxZ"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xFD-FK-6pu" secondAttribute="trailing" constant="10" id="9pr-i5-eo1"/>
+                    <constraint firstItem="xFD-FK-6pu" firstAttribute="leading" secondItem="vd0-kg-lOn" secondAttribute="trailing" constant="10" id="HQz-1V-tHE"/>
+                    <constraint firstItem="RFK-lS-6Qj" firstAttribute="bottom" secondItem="xFD-FK-6pu" secondAttribute="bottom" constant="-10" id="KnC-SO-o0Z"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RFK-lS-6Qj" secondAttribute="trailing" constant="10" id="NYn-sZ-cop"/>
+                    <constraint firstItem="xFD-FK-6pu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Tyo-Ro-zR7"/>
+                    <constraint firstAttribute="bottom" secondItem="xFD-FK-6pu" secondAttribute="bottom" constant="10" id="ZuQ-lc-T1q"/>
+                    <constraint firstItem="xFD-FK-6pu" firstAttribute="height" relation="greaterThanOrEqual" secondItem="vd0-kg-lOn" secondAttribute="height" id="cH8-Rt-5kr"/>
+                    <constraint firstItem="RFK-lS-6Qj" firstAttribute="leading" secondItem="xFD-FK-6pu" secondAttribute="leading" constant="20" id="kR5-tX-Yu5"/>
+                    <constraint firstItem="xFD-FK-6pu" firstAttribute="width" relation="greaterThanOrEqual" secondItem="RFK-lS-6Qj" secondAttribute="width" constant="30" id="o9C-sg-mb7"/>
+                    <constraint firstItem="vd0-kg-lOn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="qh3-EV-MSD"/>
+                    <constraint firstItem="RFK-lS-6Qj" firstAttribute="top" secondItem="xFD-FK-6pu" secondAttribute="top" constant="10" id="tB8-Fd-Jx6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageText" destination="RFK-lS-6Qj" id="VNh-13-y18"/>
+                <outlet property="senderIconImageView" destination="vd0-kg-lOn" id="RDg-dv-UY9"/>
+            </connections>
+            <point key="canvasLocation" x="90" y="119"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="left_bubble" width="35" height="32"/>
+    </resources>
+</document>
